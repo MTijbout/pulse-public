@@ -21,7 +21,7 @@ PASSWORD="password"
 clear
 
 echo -e "\\nPlease enter your Pulse environment (e.g. iotc001.vmware.com)"
-read -p 'Username: ' PULSEINSTANCE
+read -p 'Pulse instance: ' PULSEINSTANCE
 
 echo -e "\\nPlease enter your username (e.g. msmith@pulse.local) to log in to Pulse"
 read -p 'Username: ' ADMIN_ACCOUNT
