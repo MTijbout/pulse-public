@@ -8,7 +8,6 @@
 ################################################################################
 ## Set Variables
 ################################################################################
-PULSEINSTANCE=iotcXXX.vmware.com
 INPUT_FILE="users-list"
 LOG_FILE="output-userCreation.log"
 ORG_ADMINS="id-string"
@@ -20,15 +19,12 @@ PASSWORD="password"
 ################################################################################
 # Ask User for their first name
 clear
-echo -e "\\nHello, who do I have the pleasure of interacting with today?"
-read -p 'Please enter your First Name: ' firstname
-echo -e "\\nIt\'s nice to meet you, $firstname!"
-echo -e "\\nPlease enter your favorite single digit number"
-read -p 'Number: ' number
+
+echo -e "\\nPlease enter your Pulse environment (e.g. iotc001.vmware.com)"
+read -p 'Username: ' PULSEINSTANCE
 
 echo -e "\\nPlease enter your username (e.g. msmith@pulse.local) to log in to Pulse"
 read -p 'Username: ' ADMIN_ACCOUNT
-echo -e "\\nThe username you provided is: $ADMIN_ACCOUNT"
 
 echo -e "\\nPlease enter the password for the account $ADMIN_ACCOUNT"
 echo -n "Password: "
@@ -37,7 +33,6 @@ read -s ADMIN_PASSWORD
 echo -e "\\n\\nThank you, we are now going to programatically create a few things in the Pulse Console using Rest API calls.\n"
 read -n 1 -s -r -p "Press any key to continue"
 echo -e "\\n"
-
 
 ################################################################################
 ## Rest API Calls to manipulate Pulse
