@@ -22,13 +22,16 @@ clear
 
 echo -e "\\nPlease enter your Pulse environment (e.g. iotc001.vmware.com)"
 read -p 'Pulse instance: ' PULSEINSTANCE
+# PULSEINSTANCE="iotc00x.vmware.com"
 
 echo -e "\\nPlease enter your username (e.g. msmith@pulse.local) to log in to Pulse"
 read -p 'Username: ' ADMIN_ACCOUNT
+# ADMIN_ACCOUNT="username@domain.local"
 
 echo -e "\\nPlease enter the password for the account $ADMIN_ACCOUNT"
 echo -n "Password: "
 read -s ADMIN_PASSWORD
+# ADMIN_PASSWORD="your_password"
 
 echo -e "\\n\\nThank you, we are now going to programatically create a few things in the Pulse Console using Rest API calls.\n"
 read -n 1 -s -r -p "Press any key to continue"
