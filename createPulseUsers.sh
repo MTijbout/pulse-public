@@ -14,6 +14,9 @@ ORG_ADMINS="id-string"
 SYSTEM_ADMINS="id-string"
 PASSWORD="password"
 
+## Start with empty log file.
+> $LOG_FILE
+
 ################################################################################
 ## User Interaction
 ################################################################################
@@ -39,9 +42,6 @@ echo -e "\\n"
 ################################################################################
 ## Rest API Calls to manipulate Pulse
 ################################################################################
-
-## Start with empty log file.
-> $LOG_FILE
 
 ## Identify current Pulse API version
 APIVersion=$(curl --request GET \
