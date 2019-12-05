@@ -38,6 +38,9 @@ echo -e "\\n"
 ## Rest API Calls to manipulate Pulse
 ################################################################################
 
+## Start with empty log file.
+> $LOG_FILE
+
 ## Identify current Pulse API version
 APIVersion=$(curl --request GET \
   --url https://$PULSEINSTANCE:443/api/versions \
