@@ -17,7 +17,6 @@ PASSWORD="password"
 ################################################################################
 ## User Interaction
 ################################################################################
-# Ask User for their first name
 clear
 
 echo -e "\\nPlease enter your Pulse environment (e.g. iotc001.vmware.com)"
