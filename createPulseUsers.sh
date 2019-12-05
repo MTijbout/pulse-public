@@ -55,7 +55,7 @@ APIVersion=$(curl --request GET \
 | awk -F ':' '{print $2'} | awk -F ',' '{print $1}' | sed -e 's/"//g')
 
 ## Use Basic Auth to retrieve Bearer Token
-BearerToken=$(curl --user mtijbout@pulse.local:VMware1! --request GET \
+BearerToken=$(curl --user ${ADMIN_ACCOUNT}:${ADMIN_PASSWORD} --request GET \
 --url https://$PULSEINSTANCE:443/api/tokens \
 --header "Accept: application/json;api-version=$APIVersion" \
 --header 'Cache-Control: no-cache' \
