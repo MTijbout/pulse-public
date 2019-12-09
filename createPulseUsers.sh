@@ -2,6 +2,7 @@
 
 # Author: Marco Tijbout
 # Version: 2.0a
+# Release: Public
 # Last Update: 05-Dec-19
 # Modification Note(s):
 
